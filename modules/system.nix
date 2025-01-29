@@ -30,6 +30,7 @@
           "/Applications/Slack.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
           "/Applications/iTerm.app"
+          "/Applications/Sublime Text.app"
           "/Applications/Spotify.app"
         ];
 

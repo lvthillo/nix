@@ -7,10 +7,11 @@
       dbaeumer.vscode-eslint
       eamodio.gitlens
       jnoortheen.nix-ide
-      bradlc.vscode-tailwindcss
       expo.vscode-expo-tools
       hashicorp.terraform
       amazonwebservices.aws-toolkit-vscode
+      kddejong.vscode-cfn-lint
+      ms-python.python
 
       # Catppuccin
       catppuccin.catppuccin-vsc
@@ -38,6 +39,18 @@
       # GitLens
       "gitlens.codeLens.enabled" = false;
 
+      # Terraform
+      "[terraform]" = {
+        "editor.defaultFormatter" = "hashicorp.terraform";
+        "editor.formatOnSave" = true;
+        "editor.formatOnSaveMode" = "file";
+      };
+      "[terraform-vars]" = {
+        "editor.defaultFormatter" = "hashicorp.terraform";
+        "editor.formatOnSave" = true;
+        "editor.formatOnSaveMode" = "file";
+      };
+
       # Catppuccin
       "workbench.colorTheme" = "Catppuccin Macchiato";
       "workbench.iconTheme" = "catppuccin-macchiato";
@@ -55,18 +68,6 @@
       "[nix]" = {
         "editor.defaultFormatter" = "jnoortheen.nix-ide";
         "editor.formatOnSave" = true;
-      };
-
-      # Terraform
-      "[terraform]" = {
-        "editor.defaultFormatter" = "hashicorp.terraform";
-        "editor.formatOnSave" = true;
-        "editor.formatOnSaveMode" = "file";
-      };
-      "[terraform-vars]" = {
-        "editor.defaultFormatter" = "hashicorp.terraform";
-        "editor.formatOnSave" = true;
-        "editor.formatOnSaveMode" = "file";
       };
 
       # GitHub Copilot

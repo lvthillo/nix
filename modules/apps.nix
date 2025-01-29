@@ -48,6 +48,8 @@
       "wget"
       "hugo"
       "pinentry-mac" #gpg dependency
+      "snyk-cli"
+      "gnupg"
     ];
 
     # `brew install --cask`

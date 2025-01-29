@@ -3,11 +3,11 @@
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
+    autosuggestion.enable = false;
 
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "aws" "terraform"];
+      plugins = ["git" "aws" "terraform" "gh" "nvm" "pyenv" "sublime"];
       theme = "agnoster";
     };
 
