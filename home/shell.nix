@@ -29,15 +29,15 @@
 
     profileExtra = ''
       eval "$(brew shellenv)"
+      eval "$(pyenv init --path)"
     '';
 
     sessionVariables = {
-      # TODO
-      PATH = "$PATH:$HOME/go/bin";
+      PATH = "$PYENV_ROOT/bin:$HOME/go/bin:$PATH";
       GOPATH = "$HOME/go";
       NVM_DIR = "$HOME/.nvm";
+      PYENV_ROOT = "$HOME/.pyenv";
       AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
-      #NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
     };
   };
 }
