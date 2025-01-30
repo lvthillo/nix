@@ -61,6 +61,7 @@
       "postgres-unofficial"
       "sublime-text"
       "iterm2"
+      "session-manager-plugin"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
