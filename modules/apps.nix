@@ -52,6 +52,7 @@
       "gnupg"
       "mkdocs"
       "mkdocs-material"
+      "telnet"
     ];
 
     # `brew install --cask`
@@ -64,6 +65,9 @@
       "sublime-text"
       "iterm2"
       "session-manager-plugin"
+      # Remove below after a while
+      # Necessary for testing the license server connection
+      "intellij-idea"
     ];
 
     # https://github.com/zhaofengli/nix-homebrew/issues/5#issuecomment-1878798641
