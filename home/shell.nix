@@ -33,9 +33,9 @@
     '';
 
     sessionVariables = {
-      PATH = "$PYENV_ROOT/bin:$HOME/go/bin:$PATH";
-      GOPATH = "$HOME/go";
       NVM_DIR = "$HOME/.nvm";
+      PATH = "$NVM_DIR/versions/node/$(nvm version)/bin:$PYENV_ROOT/bin:$HOME/go/bin:$PATH";
+      GOPATH = "$HOME/go";
       PYENV_ROOT = "$HOME/.pyenv";
       AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
     };
