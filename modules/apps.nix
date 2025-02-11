@@ -50,8 +50,6 @@
       "pinentry-mac" #gpg dependency
       "snyk-cli"
       "gnupg"
-      "mkdocs"
-      "mkdocs-material"
       "telnet"
     ];
 
