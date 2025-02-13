@@ -47,10 +47,11 @@
       "make"
       "wget"
       "hugo"
-      "pinentry-mac" #gpg dependency
+      "pinentry-mac" # gpg dependency
       "snyk-cli"
       "gnupg"
       "telnet"
+      "pylint"
     ];
 
     # `brew install --cask`
