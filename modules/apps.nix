@@ -52,6 +52,7 @@
       "gnupg"
       "telnet"
       "pylint"
+      "dagger"
     ];
 
     # `brew install --cask`
