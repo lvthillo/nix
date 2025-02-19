@@ -21,20 +21,14 @@
       ll = "ls -l";
     };
 
-    initExtra = ''
-      # Node Version Manager
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-    '';
-
     profileExtra = ''
       eval "$(brew shellenv)"
       eval "$(pyenv init --path)"
     '';
 
     sessionVariables = {
-      NVM_DIR = "$HOME/.nvm";
-      PATH = "$PYENV_ROOT/bin:$HOME/go/bin:$PATH";
+      VOLTA_HOME = "$HOME/.volta";
+      PATH = "$PYENV_ROOT/bin:$HOME/go/bin:$VOLTA_HOME/bin:$PATH";
       GOPATH = "$HOME/go";
       PYENV_ROOT = "$HOME/.pyenv";
       AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
