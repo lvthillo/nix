@@ -1,86 +1,90 @@
 {pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-marketplace;
-    with pkgs.vscode-marketplace-release; [
-      esbenp.prettier-vscode
-      dbaeumer.vscode-eslint
-      eamodio.gitlens
-      jnoortheen.nix-ide
-      expo.vscode-expo-tools
-      hashicorp.terraform
-      amazonwebservices.aws-toolkit-vscode
-      kddejong.vscode-cfn-lint
-      ms-python.python
 
-      # Catppuccin
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
+    profiles.default = {
+      extensions = with pkgs.vscode-marketplace;
+      with pkgs.vscode-marketplace-release; [
+        esbenp.prettier-vscode
+        dbaeumer.vscode-eslint
+        eamodio.gitlens
+        jnoortheen.nix-ide
+        expo.vscode-expo-tools
+        hashicorp.terraform
+        amazonwebservices.aws-toolkit-vscode
+        kddejong.vscode-cfn-lint
+        ms-python.python
 
-      # GitHub Copilot
-      github.copilot
-      github.copilot-chat
-    ];
-    userSettings = {
-      # Use iTerm2 as the terminal
-      "terminal.external.osxExec" = "iTerm.app";
+        # Catppuccin
+        catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
 
-      # Visual Studio Code
-      "workbench.startupEditor" = "none";
-      "security.workspace.trust.enabled" = false;
+        # GitHub Copilot
+        github.copilot
+        github.copilot-chat
+      ];
+      userSettings = {
+        # Use iTerm2 as the terminal
+        "terminal.external.osxExec" = "iTerm.app";
 
-      # Prettier
-      "editor.defaultFormatter" = "esbenp.prettier-vscode";
-      "editor.formatOnSave" = true;
-      "prettier.requireConfig" = true;
+        # Visual Studio Code
+        "workbench.startupEditor" = "none";
+        "security.workspace.trust.enabled" = false;
 
-      # ESLint
-      "editor.codeActionsOnSave" = {
-        "source.fixAll" = "explicit";
-      };
-
-      # GitLens
-      "gitlens.codeLens.enabled" = false;
-
-      # Terraform
-      "[terraform]" = {
-        "editor.defaultFormatter" = "hashicorp.terraform";
+        # Prettier
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
-        "editor.formatOnSaveMode" = "file";
-      };
-      "[terraform-vars]" = {
-        "editor.defaultFormatter" = "hashicorp.terraform";
-        "editor.formatOnSave" = true;
-        "editor.formatOnSaveMode" = "file";
-      };
+        "prettier.requireConfig" = true;
 
-      # Catppuccin
-      "workbench.colorTheme" = "Catppuccin Macchiato";
-      "workbench.iconTheme" = "catppuccin-macchiato";
+        # ESLint
+        "editor.codeActionsOnSave" = {
+          "source.fixAll" = "explicit";
+        };
 
-      # Nix
-      "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nixd";
-      "nix.serverSettings" = {
-        "nixd" = {
-          "formatting" = {
-            "command" = ["alejandra"];
+        # GitLens
+        "gitlens.codeLens.enabled" = false;
+
+        # Terraform
+        "[terraform]" = {
+          "editor.defaultFormatter" = "hashicorp.terraform";
+          "editor.formatOnSave" = true;
+          "editor.formatOnSaveMode" = "file";
+        };
+        "[terraform-vars]" = {
+          "editor.defaultFormatter" = "hashicorp.terraform";
+          "editor.formatOnSave" = true;
+          "editor.formatOnSaveMode" = "file";
+        };
+
+        # Catppuccin
+        "workbench.colorTheme" = "Catppuccin Macchiato";
+        "workbench.iconTheme" = "catppuccin-macchiato";
+
+        # Nix
+        "nix.enableLanguageServer" = true;
+        "nix.serverPath" = "nixd";
+        "nix.serverSettings" = {
+          "nixd" = {
+            "formatting" = {
+              "command" = ["alejandra"];
+            };
           };
         };
-      };
-      "[nix]" = {
-        "editor.defaultFormatter" = "jnoortheen.nix-ide";
-        "editor.formatOnSave" = true;
-      };
+        "[nix]" = {
+          "editor.defaultFormatter" = "jnoortheen.nix-ide";
+          "editor.formatOnSave" = true;
+        };
 
-      # GitHub Copilot
-      "github.copilot.enable" = {
-        "*" = true;
-        "plaintext" = false;
-        "markdown" = true;
-        "scminput" = false;
+        # GitHub Copilot
+        "github.copilot.enable" = {
+          "*" = true;
+          "plaintext" = false;
+          "markdown" = true;
+          "scminput" = false;
+        };
       };
     };
+
     mutableExtensionsDir = true;
   };
 }
