@@ -22,6 +22,9 @@
       github.copilot-chat
     ];
     userSettings = {
+      # Use iTerm2 as the terminal
+      "terminal.external.osxExec" = "iTerm.app";
+
       # Visual Studio Code
       "workbench.startupEditor" = "none";
       "security.workspace.trust.enabled" = false;

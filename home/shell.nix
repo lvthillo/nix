@@ -25,13 +25,18 @@
       eval "$(brew shellenv)"
       eval "$(pyenv init --path)"
     '';
-
-    sessionVariables = {
-      VOLTA_HOME = "$HOME/.volta";
-      PATH = "$PYENV_ROOT/bin:$HOME/go/bin:$VOLTA_HOME/bin:$PATH";
-      GOPATH = "$HOME/go";
-      PYENV_ROOT = "$HOME/.pyenv";
-      AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
-    };
   };
+
+  home.sessionVariables = {
+    VOLTA_HOME = "$HOME/.volta";
+    GOPATH = "$HOME/go";
+    PYENV_ROOT = "$HOME/.pyenv";
+    AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
+  };
+
+  home.sessionPath = [
+    "$VOLTA_HOME/bin"
+    "$PYENV_ROOT/bin"
+    "$HOME/go/bin"
+  ];
 }

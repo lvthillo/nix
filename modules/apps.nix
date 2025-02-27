@@ -39,7 +39,6 @@
       "aws-sam-cli"
       "cfn-lint"
       "commitizen"
-      "bitwarden-cli"
       "pyenv"
       "pyenv-virtualenv"
       "black"
@@ -48,7 +47,6 @@
       "wget"
       "hugo"
       "pinentry-mac" # gpg dependency
-      "snyk-cli"
       "gnupg"
       "telnet"
       "pylint"
