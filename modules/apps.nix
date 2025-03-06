@@ -51,6 +51,7 @@
       "telnet"
       "pylint"
       "dagger"
+      "act"
     ];
 
     # `brew install --cask`
