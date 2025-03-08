@@ -24,6 +24,7 @@
     profileExtra = ''
       eval "$(brew shellenv)"
       eval "$(pyenv init --path)"
+      eval "$(/usr/libexec/path_helper)"
     '';
   };
 
@@ -38,5 +39,6 @@
     "$VOLTA_HOME/bin"
     "$PYENV_ROOT/bin"
     "$HOME/go/bin"
+    "/Library/TeX/texbin"
   ];
 }
