@@ -64,6 +64,7 @@
       "sublime-text"
       "iterm2"
       "session-manager-plugin"
+      "mactex"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"
