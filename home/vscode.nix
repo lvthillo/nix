@@ -9,7 +9,6 @@
         dbaeumer.vscode-eslint
         eamodio.gitlens
         jnoortheen.nix-ide
-        expo.vscode-expo-tools
         hashicorp.terraform
         amazonwebservices.aws-toolkit-vscode
         kddejong.vscode-cfn-lint
