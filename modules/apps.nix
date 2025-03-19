@@ -52,6 +52,7 @@
       "pylint"
       "dagger"
       "act"
+      "mdformat"
     ];
 
     # `brew install --cask`
@@ -65,6 +66,7 @@
       "iterm2"
       "session-manager-plugin"
       "mactex"
+      "postman"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"
