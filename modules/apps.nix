@@ -53,6 +53,9 @@
       "dagger"
       "act"
       "mdformat"
+      "openjdk@23"
+      "maven"
+      "gradle"
     ];
 
     # `brew install --cask`
