@@ -56,6 +56,8 @@
       "openjdk@23"
       "maven"
       "gradle"
+      "eza"
+      "bat"
     ];
 
     # `brew install --cask`
