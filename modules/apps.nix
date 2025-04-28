@@ -58,6 +58,7 @@
       "gradle"
       "eza"
       "bat"
+      "goreleaser"
     ];
 
     # `brew install --cask`
