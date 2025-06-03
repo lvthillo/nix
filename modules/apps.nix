@@ -59,6 +59,7 @@
       "eza"
       "bat"
       "goreleaser"
+      "jfrog-cli"
     ];
 
     # `brew install --cask`
