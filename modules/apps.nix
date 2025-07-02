@@ -57,6 +57,7 @@
       "bat"
       "goreleaser"
       "jfrog-cli"
+      "git-filter-repo"
     ];
 
     # `brew install --cask`
