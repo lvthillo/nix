@@ -58,6 +58,7 @@
       "goreleaser"
       "jfrog-cli"
       "git-filter-repo"
+      "openjdk"
     ];
 
     # `brew install --cask`
