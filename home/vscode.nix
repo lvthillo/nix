@@ -81,6 +81,11 @@
           "markdown" = true;
           "scminput" = false;
         };
+        "github.copilot.nextEditSuggestions.enabled" = true;
+
+        # Copilot Beast Mode
+        "chat.tools.autoApprove" = true;
+        "chat.agent.maxRequests" = 100;
       };
     };
 
