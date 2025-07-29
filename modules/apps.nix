@@ -19,7 +19,6 @@
     # For details, see https://github.com/mas-cli/mas
     masApps = {
       "Xcode" = 497799835;
-      "Spark Classic" = 1176895641;
       "Slack" = 803453959;
       "The Unarchiver" = 425424353;
       "Boop" = 1518425043;

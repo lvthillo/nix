@@ -31,7 +31,6 @@
         persistent-apps = [
           "/System/Applications/Launchpad.app"
           "/Applications/Firefox.app"
-          "/Applications/Spark.app"
           "/Applications/Slack.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
           "/Applications/iTerm.app"
