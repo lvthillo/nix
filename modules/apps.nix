@@ -58,6 +58,7 @@
       "jfrog-cli"
       "git-filter-repo"
       "openjdk"
+      "podman"
     ];
 
     # `brew install --cask`
@@ -65,7 +66,6 @@
       "firefox"
       "discord"
       "spotify"
-      "orbstack"
       "postgres-unofficial"
       "sublime-text"
       "iterm2"
