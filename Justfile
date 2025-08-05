@@ -1,6 +1,6 @@
 # just is a command runner, justfile is very similar to Makefile, but simpler.
 
-hostname := "BEKT7VWGFQDP"
+hostname := `hostname -s`
 
 # List all the just commands
 default:
@@ -35,7 +35,7 @@ deploy-debug:
 # Update all the flake inputs
 [group('nix')]
 up:
-  nix flake update
+  nix flake update --option access-tokens "github.com=$(gh auth token)"
 
 # Update specific input
 # Usage: just upp nixpkgs

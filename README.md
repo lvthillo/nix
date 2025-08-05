@@ -39,11 +39,11 @@ $ git clone git@github.com:lvthillo/nix.git
 ### 2. Deploy the configuration
 
 ```bash
-$ nix build .#darwinConfigurations.BEKT7VWGFQDP.system --extra-experimental-features 'nix-command flakes'
+$ nix build .#darwinConfigurations.$(hostname -s).system --extra-experimental-features 'nix-command flakes'
 
-$ ./result/sw/bin/darwin-rebuild switch --flake .#BEKT7VWGFQDP
+$ ./result/sw/bin/darwin-rebuild switch --flake .#$(hostname -s)
 ```
 
 After deploying the configuration for the first time, you can simply run `just deploy` to apply changes.
 
-To view all available commands, run `just` .
+To view all available commands, run `just`.

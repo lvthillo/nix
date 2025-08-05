@@ -5,11 +5,9 @@
   # Each item in `inputs` will be passed as a parameter to the `outputs` function after being pulled and built.
   inputs = {
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
 
     # home-manager, used for managing user configuration
     home-manager = {
-      #url = "github:nix-community/home-manager/release-24.05";
       url = "github:nix-community/home-manager";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
@@ -41,8 +39,8 @@
       flake = false;
     };
 
-    homebrew-granted = {
-      url = "github:common-fate/homebrew-granted";
+    homebrew-services = {
+      url = "github:homebrew/homebrew-services";
       flake = false;
     };
 
@@ -66,7 +64,7 @@
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
-    homebrew-granted,
+    homebrew-services,
     ...
   }: let
     username = "lovanthillo";
@@ -114,7 +112,7 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
-              "common-fate/homebrew-granted" = homebrew-granted;
+              "homebrew/homebrew-services" = homebrew-services;
             };
 
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
