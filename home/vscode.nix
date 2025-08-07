@@ -86,6 +86,7 @@
         # Copilot Beast Mode
         "chat.tools.autoApprove" = true;
         "chat.agent.maxRequests" = 100;
+        "chat.mcp.enabled" = true;
       };
     };
 
