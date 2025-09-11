@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  mcpServers,
+  ...
+}: {
   programs.vscode = {
     enable = true;
 
@@ -91,5 +95,63 @@
     };
 
     mutableExtensionsDir = true;
+  };
+
+  # VS Code-specific MCP configuration file
+  home.file."Library/Application Support/Code/User/mcp.json" = {
+    text = builtins.toJSON {
+      inputs = [
+        {
+          type = "promptString";
+          id = "github_token";
+          description = "GitHub Personal Access Token";
+          password = true;
+        }
+        {
+          type = "promptString";
+          id = "jira_token";
+          description = "JIRA Personal Access Token";
+          password = true;
+        }
+        {
+          type = "promptString";
+          id = "jira_url";
+          description = "JIRA URL";
+          password = false;
+        }
+        {
+          type = "promptString";
+          id = "context7_api_key";
+          description = "Context7 API Key";
+          password = true;
+        }
+      ];
+      servers = {
+        github = {
+          command = "${mcpServers.github}/bin/github-mcp-server";
+          args = ["stdio"];
+          env = {
+            GITHUB_PERSONAL_ACCESS_TOKEN = "\${input:github_token}";
+            GITHUB_TOOLSETS = "dependabot,context,pull_requests,repos";
+          };
+        };
+        mcp-atlassian = {
+          command = "${mcpServers.atlassian}/bin/mcp-atlassian-server";
+          env = {
+            JIRA_URL = "\${input:jira_url}";
+            JIRA_PERSONAL_TOKEN = "\${input:jira_token}";
+            JIRA_PROJECTS_FILTER = "DEVEX";
+            ENABLED_TOOLS = "jira_search,jira_get_issue,jira_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
+          };
+        };
+        context7 = {
+          type = "stdio";
+          command = "${mcpServers.context7}/bin/context7-mcp";
+          env = {
+            CONTEXT7_API_KEY = "\${input:context7_api_key}";
+          };
+        };
+      };
+    };
   };
 }

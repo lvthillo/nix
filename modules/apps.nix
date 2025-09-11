@@ -42,8 +42,6 @@
       "aws-sam-cli"
       "cfn-lint"
       "commitizen"
-      "pyenv"
-      "pyenv-virtualenv"
       "black"
       "pre-commit"
       "make"
@@ -77,6 +75,8 @@
       "mactex"
       "postman"
       "shottr"
+      "docker-desktop"
+      "windows-app"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"
