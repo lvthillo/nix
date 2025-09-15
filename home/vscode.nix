@@ -1,8 +1,4 @@
-{
-  pkgs,
-  mcpServers,
-  ...
-}: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
 
@@ -33,6 +29,7 @@
         # Visual Studio Code
         "workbench.startupEditor" = "none";
         "security.workspace.trust.enabled" = false;
+        "terminal.integrated.showOnStartup" = "always";
 
         # Prettier
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -46,6 +43,7 @@
 
         # GitLens
         "gitlens.codeLens.enabled" = false;
+        "gitlens.graph.showOnStartup" = false;
 
         # Terraform
         "[terraform]" = {
@@ -86,11 +84,8 @@
           "scminput" = false;
         };
         "github.copilot.nextEditSuggestions.enabled" = true;
-
-        # Copilot Beast Mode
         "chat.tools.autoApprove" = true;
         "chat.agent.maxRequests" = 100;
-        "chat.mcp.enabled" = true;
       };
     };
 
@@ -128,7 +123,7 @@
       ];
       servers = {
         github = {
-          command = "${mcpServers.github}/bin/github-mcp-server";
+          command = "github-mcp-server";
           args = ["stdio"];
           env = {
             GITHUB_PERSONAL_ACCESS_TOKEN = "\${input:github_token}";
@@ -136,17 +131,17 @@
           };
         };
         mcp-atlassian = {
-          command = "${mcpServers.atlassian}/bin/mcp-atlassian-server";
+          command = "mcp-atlassian-server";
           env = {
             JIRA_URL = "\${input:jira_url}";
             JIRA_PERSONAL_TOKEN = "\${input:jira_token}";
             JIRA_PROJECTS_FILTER = "DEVEX";
-            ENABLED_TOOLS = "jira_search,jira_get_issue,jira_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
+            ENABLED_TOOLS = "jira_search,jira_get_issue,jcp_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
           };
         };
         context7 = {
           type = "stdio";
-          command = "${mcpServers.context7}/bin/context7-mcp";
+          command = "context7-mcp";
           env = {
             CONTEXT7_API_KEY = "\${input:context7_api_key}";
           };

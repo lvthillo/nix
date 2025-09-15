@@ -1,4 +1,10 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: let
+  mcpServers = import ./mcp.nix {inherit pkgs;};
+in {
   # import sub modules
   imports = [
     ./shell.nix
@@ -9,7 +15,14 @@
     ./go.nix
     ./direnv.nix
     ./gpg.nix
-    ./mcp.nix
+  ];
+
+  # Install MCP servers
+  home.packages = with mcpServers; [
+    github
+    atlassian
+    context7
+    pkgs.nodejs # For npm-based servers
   ];
 
   # Home Manager needs a bit of information about you and the
