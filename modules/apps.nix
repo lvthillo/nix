@@ -60,7 +60,8 @@
       "jfrog-cli"
       "git-filter-repo"
       "openjdk"
-      "podman"
+      "maven"
+      "gradle"
     ];
 
     # `brew install --cask`

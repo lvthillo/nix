@@ -26,7 +26,7 @@
     VOLTA_HOME = "$HOME/.volta";
     GOPATH = "$HOME/go";
     AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
-    JAVA_HOME = "/opt/homebrew/Cellar/openjdk/24.0.1/libexec/openjdk.jdk/Contents/Home/";
+    JAVA_HOME = "/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home/";
   };
 
   home.sessionPath = [
