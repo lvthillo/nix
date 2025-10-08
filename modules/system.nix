@@ -18,7 +18,7 @@
         show-recents = false;
 
         persistent-apps = [
-          "/System/Applications/Launchpad.app"
+          "/System/Applications/Apps.app"
           "/Applications/Firefox.app"
           "/Applications/Slack.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
