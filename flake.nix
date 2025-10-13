@@ -71,7 +71,7 @@
     userfullname = "Lorenz Vanthillo";
     useremail = "lorenz.vanthillo@gmail.com";
     system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
-    hostname = "BEKT7VWGFQDP";
+    hostname = "KT7VWGFQDP";
 
     specialArgs =
       inputs
