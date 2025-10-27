@@ -62,6 +62,7 @@
       "openjdk"
       "maven"
       "gradle"
+      "pipx"
     ];
 
     # `brew install --cask`
