@@ -33,6 +33,7 @@
 
   home.sessionPath = [
     "$VOLTA_HOME/bin"
+    "$HOME/.local/bin"
     "$HOME/go/bin"
     "/Library/TeX/texbin"
   ];
