@@ -29,20 +29,6 @@
         signByDefault = true;
       };
 
-      includes = [
-        {
-          path = "~/dpg/.ssh/.gitconfig";
-          condition = "gitdir:~/dpg/";
-        }
-      ];
-
-      delta = {
-        enable = true;
-        options = {
-          features = "side-by-side";
-        };
-      };
-
       alias = {
         br = "branch";
         co = "checkout";
@@ -57,6 +43,13 @@
         foreach = "submodule foreach";
       };
     };
+
+    includes = [
+      {
+        path = "~/dpg/.ssh/.gitconfig";
+        condition = "gitdir:~/dpg/";
+      }
+    ];
   };
 
   home.file = {
