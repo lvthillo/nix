@@ -19,8 +19,8 @@ in {
 
   # Install MCP servers
   home.packages = with mcpServers; [
-    github
-    atlassian
+    #github
+    #atlassian
     context7
     pkgs.nodejs # For npm-based servers
   ];

@@ -122,23 +122,23 @@
         }
       ];
       servers = {
-        github = {
-          command = "github-mcp-server";
-          args = ["stdio"];
-          env = {
-            GITHUB_PERSONAL_ACCESS_TOKEN = "\${input:github_token}";
-            GITHUB_TOOLSETS = "dependabot,context,pull_requests,repos";
-          };
-        };
-        mcp-atlassian = {
-          command = "mcp-atlassian-server";
-          env = {
-            JIRA_URL = "\${input:jira_url}";
-            JIRA_PERSONAL_TOKEN = "\${input:jira_token}";
-            JIRA_PROJECTS_FILTER = "DEVEX";
-            ENABLED_TOOLS = "jira_search,jira_get_issue,jcp_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
-          };
-        };
+        # github = {
+        #   command = "github-mcp-server";
+        #   args = ["stdio"];
+        #   env = {
+        #     GITHUB_PERSONAL_ACCESS_TOKEN = "\${input:github_token}";
+        #     GITHUB_TOOLSETS = "dependabot,context,pull_requests,repos";
+        #   };
+        # };
+        # mcp-atlassian = {
+        #   command = "mcp-atlassian-server";
+        #   env = {
+        #     JIRA_URL = "\${input:jira_url}";
+        #     JIRA_PERSONAL_TOKEN = "\${input:jira_token}";
+        #     JIRA_PROJECTS_FILTER = "DEVEX";
+        #     ENABLED_TOOLS = "jira_search,jira_get_issue,jcp_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
+        #   };
+        # };
         context7 = {
           type = "stdio";
           command = "context7-mcp";
