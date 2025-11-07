@@ -50,11 +50,7 @@
       "pinentry-mac" # gpg dependency
       "gnupg"
       "telnet"
-      "pylint"
-      "dagger"
       "act"
-      "mdformat"
-      "eza"
       "bat"
       "goreleaser"
       "jfrog-cli"
@@ -62,7 +58,8 @@
       "openjdk"
       "maven"
       "gradle"
-      "pipx"
+      "specify"
+      "mcp-publisher"
     ];
 
     # `brew install --cask`
@@ -78,7 +75,6 @@
       "postman"
       "shottr"
       "docker-desktop"
-      "windows-app"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"
