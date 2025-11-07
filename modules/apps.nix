@@ -60,6 +60,7 @@
       "gradle"
       "specify"
       "mcp-publisher"
+      "ko"
     ];
 
     # `brew install --cask`
