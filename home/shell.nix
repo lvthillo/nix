@@ -5,6 +5,21 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
 
+    initContent = ''
+      fix-compinit() {
+        for file in $(compaudit); do
+          sudo chmod 755 $file
+          sudo chmod 755 $(dirname $file)
+          sudo chown $(whoami) $file
+        done
+      }
+    '';
+
+    profileExtra = ''
+      # Homebrew
+      eval "$(brew shellenv zsh)"
+    '';
+
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "aws" "terraform" "gh" "nvm" "sublime"];
