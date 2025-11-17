@@ -24,11 +24,6 @@
       core.editor = "vim";
       gpg.format = "openpgp";
 
-      signing = {
-        key = "55F15386881C1246";
-        signByDefault = true;
-      };
-
       alias = {
         br = "branch";
         co = "checkout";
@@ -50,6 +45,11 @@
         condition = "gitdir:~/dpg/";
       }
     ];
+
+    signing = {
+      key = "55F15386881C1246";
+      signByDefault = true;
+    };
   };
 
   home.file = {
