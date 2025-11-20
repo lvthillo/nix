@@ -76,6 +76,8 @@
       "postman"
       "shottr"
       "docker-desktop"
+      "kiro"
+      "kiro-cli"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"

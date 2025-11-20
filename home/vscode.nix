@@ -13,7 +13,6 @@
         amazonwebservices.aws-toolkit-vscode
         kddejong.vscode-cfn-lint
         ms-python.python
-        amazonwebservices.amazon-q-vscode
 
         # Catppuccin
         catppuccin.catppuccin-vsc

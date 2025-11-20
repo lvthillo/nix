@@ -5,21 +5,6 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
 
-    initContent = ''
-      fix-compinit() {
-        for file in $(compaudit); do
-          sudo chmod 755 $file
-          sudo chmod 755 $(dirname $file)
-          sudo chown $(whoami) $file
-        done
-      }
-    '';
-
-    profileExtra = ''
-      # Homebrew
-      eval "$(brew shellenv zsh)"
-    '';
-
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "aws" "terraform" "gh" "nvm" "sublime"];
@@ -31,7 +16,6 @@
       tfapply = "terraform apply";
       tfplan = "terraform plan";
       czm = "cz commit";
-      gco = "git checkout";
       devex-prod = "export AWS_PROFILE=devex-prod-admin";
       devex-non-prod = "export AWS_PROFILE=devex-non-prod-admin";
       ll = "ls -l";
@@ -39,6 +23,7 @@
   };
 
   home.sessionVariables = {
+    ZSH_DISABLE_COMPFIX = "true";
     VOLTA_HOME = "$HOME/.volta";
     GOPATH = "$HOME/go";
     AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
