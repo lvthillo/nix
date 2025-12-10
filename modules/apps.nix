@@ -78,6 +78,7 @@
       "docker-desktop"
       "kiro"
       "kiro-cli"
+      "claude-code"
       # Remove below after a while
       # Necessary for testing the license server connection
       "intellij-idea"
