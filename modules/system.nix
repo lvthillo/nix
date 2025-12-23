@@ -1,4 +1,8 @@
-{pkgs, ...}:
+{
+  pkgs,
+  username,
+  ...
+}:
 ###################################################################################
 #
 #  macOS's System configuration
@@ -74,6 +78,17 @@
 
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
+
+  # Fix zsh completion insecure files automatically on system activation
+  system.activationScripts.fixZshCompletions.text = ''
+    echo "Checking zsh completion file permissions..."
+    if [ -f /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ]; then
+      chown ${username} /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion 2>/dev/null || true
+      chown ${username} /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion 2>/dev/null || true
+      chown ${username} /opt/homebrew/share/zsh/site-functions/_docker* 2>/dev/null || true
+      echo "✓ Fixed Docker zsh completion file ownership"
+    fi
+  '';
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh

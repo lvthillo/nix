@@ -78,3 +78,17 @@ fmt:
 gcroot:
   ls -al /nix/var/nix/gcroots/auto/
 
+# Fix zsh completion insecure files warning
+[group('desktop')]
+fix-zsh:
+  #!/usr/bin/env bash
+  echo "Fixing zsh completion file permissions..."
+  if [ -f /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion ]; then
+    sudo chown $(whoami) /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion
+    sudo chown $(whoami) /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion
+    sudo chown $(whoami) /opt/homebrew/share/zsh/site-functions/_docker*
+    echo "✓ Fixed Docker completion file ownership"
+  else
+    echo "Docker completion files not found"
+  fi
+
