@@ -86,6 +86,8 @@
         "github.copilot.nextEditSuggestions.enabled" = true;
         "chat.tools.autoApprove" = true;
         "chat.agent.maxRequests" = 100;
+        "chat.customAgentInSubagent.enabled" = true;
+        "chat.todoListTool.writeOnly" = true;
       };
     };
 
