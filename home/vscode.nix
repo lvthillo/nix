@@ -88,6 +88,7 @@
         "chat.agent.maxRequests" = 100;
         "chat.customAgentInSubagent.enabled" = true;
         "chat.todoListTool.writeOnly" = true;
+        "chat.mcp.gallery.enabled" = true;
       };
     };
 
