@@ -61,6 +61,7 @@
       "specify"
       "mcp-publisher"
       "ko"
+      "poppler"
     ];
 
     # `brew install --cask`
