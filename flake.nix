@@ -39,6 +39,11 @@
       flake = false;
     };
 
+    homebrew-cloudsmith-cli = {
+      url = "github:cloudsmith-io/homebrew-cloudsmith-cli";
+      flake = false;
+    };
+
     homebrew-services = {
       url = "github:homebrew/homebrew-services";
       flake = false;
@@ -64,6 +69,7 @@
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
+    homebrew-cloudsmith-cli,
     homebrew-services,
     ...
   }: let
@@ -113,6 +119,7 @@
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
               "homebrew/homebrew-services" = homebrew-services;
+              "cloudsmith-io/homebrew-cloudsmith-cli" = homebrew-cloudsmith-cli;
             };
 
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.

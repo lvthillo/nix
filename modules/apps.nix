@@ -62,6 +62,7 @@
       "mcp-publisher"
       "ko"
       "poppler"
+      "cloudsmith-cli"
     ];
 
     # `brew install --cask`
