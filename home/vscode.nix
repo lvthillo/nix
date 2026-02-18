@@ -89,6 +89,7 @@
         "chat.todoListTool.writeOnly" = true;
         "chat.mcp.gallery.enabled" = true;
         "chat.useAgentSkills" = true;
+        "chat.hooks.enabled" = true;
       };
     };
 
@@ -105,18 +106,18 @@
           description = "GitHub Personal Access Token";
           password = true;
         }
-        {
-          type = "promptString";
-          id = "jira_token";
-          description = "JIRA Personal Access Token";
-          password = true;
-        }
-        {
-          type = "promptString";
-          id = "jira_url";
-          description = "JIRA URL";
-          password = false;
-        }
+        # {
+        #   type = "promptString";
+        #   id = "jira_token";
+        #   description = "JIRA Personal Access Token";
+        #   password = true;
+        # }
+        # {
+        #   type = "promptString";
+        #   id = "jira_url";
+        #   description = "JIRA URL";
+        #   password = false;
+        # }
         {
           type = "promptString";
           id = "context7_api_key";
