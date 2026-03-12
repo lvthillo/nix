@@ -63,6 +63,7 @@
       "ko"
       "poppler"
       "cloudsmith-cli"
+      "gemini-cli"
     ];
 
     # `brew install --cask`
