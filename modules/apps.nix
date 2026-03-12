@@ -71,7 +71,7 @@
       "firefox"
       "discord"
       "spotify"
-      "postgres-unofficial"
+      "postgres-app"
       "sublime-text"
       "iterm2"
       "session-manager-plugin"
