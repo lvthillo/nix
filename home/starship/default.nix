@@ -85,7 +85,7 @@
 
         terraform = {
           style = "teal";
-          format = "via [$symbol]($style) ";
+          format = "via [$symbol($workspace)]($style) ";
         };
 
         nix_shell = {

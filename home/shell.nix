@@ -45,6 +45,18 @@
     cat = "bat --paging=never";
     nix-sync = "(cd ~/nix; git pull; just deploy)";
     nix-update = "(cd ~/nix; just up; git add flake.lock; git commit -m 'Update flake.lock'; git push; just deploy)";
+    gp = "git push";
+    gl = "git pull";
+    gst = "git status";
+    ga = "git add";
+    gaa = "git add --all";
+    gc = "git commit";
+    gcmsg = "git commit -m";
+    gco = "git checkout";
+    gcb = "git checkout -b";
+    gd = "git diff";
+    gb = "git branch";
+    glog = "git log --oneline --decorate --graph";
   };
 
   home.sessionVariables = {
