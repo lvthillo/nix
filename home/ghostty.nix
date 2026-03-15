@@ -4,9 +4,6 @@
     font-family = MesloLGS Nerd Font
     font-size = 13
 
-    # Catppuccin Macchiato
-    theme = catppuccin-macchiato
-
     # Window
     window-padding-x = 8
     window-padding-y = 4
