@@ -75,7 +75,7 @@
 
         nodejs = {
           style = "teal";
-          format = "via [$symbol($version)]($style) ";
+          format = "via [$symbol]($style) ";
         };
 
         python = {
