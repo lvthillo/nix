@@ -51,7 +51,6 @@
       "gnupg"
       "telnet"
       "act"
-      "bat"
       "goreleaser"
       "jfrog-cli"
       "git-filter-repo"
@@ -62,7 +61,6 @@
       "mcp-publisher"
       "ko"
       "poppler"
-      "cloudsmith-cli"
       "gemini-cli"
     ];
 
@@ -73,7 +71,7 @@
       "spotify"
       "postgres-app"
       "sublime-text"
-      "iterm2"
+      "ghostty"
       "session-manager-plugin"
       "mactex"
       "postman"

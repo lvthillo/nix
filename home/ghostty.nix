@@ -1,0 +1,23 @@
+{...}: {
+  home.file.".config/ghostty/config".text = ''
+    # Font
+    font-family = MesloLGS Nerd Font
+    font-size = 13
+
+    # Catppuccin Macchiato
+    theme = catppuccin-macchiato
+
+    # Window
+    window-padding-x = 8
+    window-padding-y = 4
+    window-decoration = true
+    macos-titlebar-style = tabs
+    window-save-state = always
+
+    # Behavior
+    copy-on-select = clipboard
+    confirm-close-surface = false
+    mouse-hide-while-typing = true
+    shell-integration = zsh
+  '';
+}

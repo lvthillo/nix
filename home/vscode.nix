@@ -23,8 +23,8 @@
         github.copilot-chat
       ];
       userSettings = {
-        # Use iTerm2 as the terminal
-        "terminal.external.osxExec" = "iTerm.app";
+        # Use Ghostty as the external terminal
+        "terminal.external.osxExec" = "Ghostty.app";
 
         # Visual Studio Code
         "workbench.startupEditor" = "none";
@@ -76,7 +76,7 @@
           "editor.formatOnSave" = true;
         };
 
-        # GitHub Copilot
+        # GitHub Copilot - Inline Suggestions & Code Editing
         "github.copilot.enable" = {
           "*" = true;
           "plaintext" = false;
@@ -84,10 +84,56 @@
           "scminput" = false;
         };
         "github.copilot.nextEditSuggestions.enabled" = true;
+        "github.copilot.nextEditSuggestions.fixes" = true;
+        "github.copilot.editor.enableCodeActions" = true;
+        "github.copilot.renameSuggestions.triggerAutomatically" = true;
+        "editor.inlineSuggest.edits.allowCodeShifting" = "always";
+        "editor.inlineSuggest.edits.renderSideBySide" = "auto";
+        "editor.inlineSuggest.syntaxHighlightingEnabled" = true;
+        "editor.inlineSuggest.minShowDelay" = 0;
+
+        # GitHub Copilot - Agent Mode & Tools
+        "chat.agent.enabled" = true;
         "chat.agent.maxRequests" = 500;
+        "github.copilot.chat.agent.autoFix" = true;
+        "github.copilot.chat.agent.runTasks" = true;
+        "github.copilot.chat.agent.thinkingTool" = true;
+        "chat.tools.terminal.enableAutoApprove" = true;
+        "chat.tools.terminal.autoApprove" = {
+          "rm" = false;
+          "rmdir" = false;
+          "del" = false;
+          "kill" = false;
+          "chmod" = false;
+          "chown" = false;
+          "eval" = false;
+        };
+
+        # GitHub Copilot - Chat & Context
+        "github.copilot.chat.codesearch.enabled" = true;
+        "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory" = true;
+        "github.copilot.chat.editor.temporalContext.enabled" = true;
+        "github.copilot.chat.reviewSelection.enabled" = true;
+        "chat.checkpoints.enabled" = true;
+
+        # GitHub Copilot - Custom Instructions & Prompt Files
+        "github.copilot.chat.codeGeneration.useInstructionFiles" = true;
+        "chat.instructionsFilesLocations" = {
+          ".github/instructions" = true;
+        };
+        "chat.promptFilesLocations" = {
+          ".github/prompts" = true;
+        };
+
+        # GitHub Copilot - Debugging
+        "github.copilot.chat.startDebugging.enabled" = true;
+        "github.copilot.chat.copilotDebugCommand.enabled" = true;
+
+        # GitHub Copilot - MCP & Features
+        "chat.mcp.gallery.enabled" = true;
+        "chat.mcp.discovery.enabled" = true;
         "chat.customAgentInSubagent.enabled" = true;
         "chat.todoListTool.writeOnly" = true;
-        "chat.mcp.gallery.enabled" = true;
         "chat.useAgentSkills" = true;
         "chat.hooks.enabled" = true;
       };

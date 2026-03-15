@@ -26,7 +26,7 @@
           "/Applications/Firefox.app"
           "/Applications/Slack.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
-          "/Applications/iTerm.app"
+          "/Applications/Ghostty.app"
           "/Applications/Sublime Text.app"
           "/Applications/Spotify.app"
         ];
@@ -100,6 +100,7 @@
   fonts = {
     packages = with pkgs; [
       nerd-fonts.fira-code
+      nerd-fonts.meslo-lg
     ];
   };
 }

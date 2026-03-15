@@ -76,43 +76,27 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1773337305,
-        "narHash": "sha256-HjQHqF9rPloUxSnNSRdZhnytIoRD2nYkx/Q/DaSeE5c=",
+        "lastModified": 1773603079,
+        "narHash": "sha256-dOgRtGxR9FnpHmtdXbMquFEsk7RsPWNw1tbuh8WU2jw=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "7061b82725e0bd2b9ad2663276d6fbc96f4332ee",
+        "rev": "fe88a287fd3237ae2541d5df2456c5d932fcbb5e",
         "type": "github"
       },
       "original": {
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "type": "github"
-      }
-    },
-    "homebrew-cloudsmith-cli": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1771248339,
-        "narHash": "sha256-QlnC6B8W3VDlGn0gI5jl2920dG1SEq9q7hPWsEUZlI0=",
-        "owner": "cloudsmith-io",
-        "repo": "homebrew-cloudsmith-cli",
-        "rev": "1c5ba01255dcdcad4abc40f7f524da5f78ae833a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cloudsmith-io",
-        "repo": "homebrew-cloudsmith-cli",
         "type": "github"
       }
     },
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1773340801,
-        "narHash": "sha256-N7qquiYDe4eZD8G1jlnWdP9e6N9U2Nj1pdETLa4esRk=",
+        "lastModified": 1773602392,
+        "narHash": "sha256-s3Cf9Lo9LlWcdi4KZ4S2pyR+6SHb9ehqKX7OMrspWeI=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "51dae99c0033924b26f86049c6a228074960ba62",
+        "rev": "2b42e168d455752a5282d083be4b404a98bba2d9",
         "type": "github"
       },
       "original": {
@@ -158,7 +142,7 @@
     "nix-vscode-extensions": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs-darwin"
         ]
       },
       "locked": {
@@ -211,7 +195,6 @@
         "home-manager": "home-manager",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
-        "homebrew-cloudsmith-cli": "homebrew-cloudsmith-cli",
         "homebrew-core": "homebrew-core",
         "homebrew-services": "homebrew-services",
         "nix-homebrew": "nix-homebrew",

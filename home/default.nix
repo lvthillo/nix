@@ -11,6 +11,8 @@ in {
     ./core.nix
     ./vscode.nix
     ./git.nix
+    ./starship
+    ./ghostty.nix
     ./ssh.nix
     ./go.nix
     ./direnv.nix

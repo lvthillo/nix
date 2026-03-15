@@ -38,12 +38,6 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
-
-    homebrew-cloudsmith-cli = {
-      url = "github:cloudsmith-io/homebrew-cloudsmith-cli";
-      flake = false;
-    };
-
     homebrew-services = {
       url = "github:homebrew/homebrew-services";
       flake = false;
@@ -51,7 +45,7 @@
 
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
   };
 
@@ -69,7 +63,6 @@
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
-    homebrew-cloudsmith-cli,
     homebrew-services,
     ...
   }: let
@@ -119,7 +112,6 @@
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
               "homebrew/homebrew-services" = homebrew-services;
-              "cloudsmith-io/homebrew-cloudsmith-cli" = homebrew-cloudsmith-cli;
             };
 
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.

@@ -7,6 +7,9 @@
         identityFile = ["${config.home.homeDirectory}/.ssh/id_ed25519"];
         addKeysToAgent = "yes";
         identitiesOnly = true;
+        extraOptions = {
+          UseKeychain = "yes";
+        };
       };
     };
   };
