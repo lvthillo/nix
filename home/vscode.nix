@@ -123,7 +123,6 @@
 
         # GitHub Copilot - MCP & Features
         "chat.mcp.gallery.enabled" = true;
-        "chat.mcp.discovery.enabled" = true;
         "chat.customAgentInSubagent.enabled" = true;
         "chat.useAgentSkills" = true;
       };
