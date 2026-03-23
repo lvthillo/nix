@@ -11,7 +11,6 @@
         jnoortheen.nix-ide
         hashicorp.terraform
         amazonwebservices.aws-toolkit-vscode
-        kddejong.vscode-cfn-lint
         ms-python.python
 
         # Catppuccin
@@ -29,7 +28,6 @@
         # Visual Studio Code
         "workbench.startupEditor" = "none";
         "security.workspace.trust.enabled" = false;
-        "terminal.integrated.showOnStartup" = "always";
 
         # Prettier
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -43,7 +41,6 @@
 
         # GitLens
         "gitlens.codeLens.enabled" = false;
-        "gitlens.graph.showOnStartup" = false;
 
         # Terraform
         "[terraform]" = {
@@ -94,11 +91,10 @@
 
         # GitHub Copilot - Agent Mode & Tools
         "chat.agent.enabled" = true;
-        "chat.agent.maxRequests" = 500;
+        "chat.agent.maxRequests" = 1000;
         "github.copilot.chat.agent.autoFix" = true;
-        "github.copilot.chat.agent.runTasks" = true;
-        "github.copilot.chat.agent.thinkingTool" = true;
         "chat.tools.terminal.enableAutoApprove" = true;
+
         "chat.tools.terminal.autoApprove" = {
           "rm" = false;
           "rmdir" = false;
@@ -108,11 +104,8 @@
           "chown" = false;
           "eval" = false;
         };
-
         # GitHub Copilot - Chat & Context
         "github.copilot.chat.codesearch.enabled" = true;
-        "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory" = true;
-        "github.copilot.chat.editor.temporalContext.enabled" = true;
         "github.copilot.chat.reviewSelection.enabled" = true;
         "chat.checkpoints.enabled" = true;
 
@@ -126,16 +119,13 @@
         };
 
         # GitHub Copilot - Debugging
-        "github.copilot.chat.startDebugging.enabled" = true;
         "github.copilot.chat.copilotDebugCommand.enabled" = true;
 
         # GitHub Copilot - MCP & Features
         "chat.mcp.gallery.enabled" = true;
         "chat.mcp.discovery.enabled" = true;
         "chat.customAgentInSubagent.enabled" = true;
-        "chat.todoListTool.writeOnly" = true;
         "chat.useAgentSkills" = true;
-        "chat.hooks.enabled" = true;
       };
     };
 
@@ -152,18 +142,6 @@
           description = "GitHub Personal Access Token";
           password = true;
         }
-        # {
-        #   type = "promptString";
-        #   id = "jira_token";
-        #   description = "JIRA Personal Access Token";
-        #   password = true;
-        # }
-        # {
-        #   type = "promptString";
-        #   id = "jira_url";
-        #   description = "JIRA URL";
-        #   password = false;
-        # }
         {
           type = "promptString";
           id = "context7_api_key";
@@ -172,23 +150,6 @@
         }
       ];
       servers = {
-        # github = {
-        #   command = "github-mcp-server";
-        #   args = ["stdio"];
-        #   env = {
-        #     GITHUB_PERSONAL_ACCESS_TOKEN = "\${input:github_token}";
-        #     GITHUB_TOOLSETS = "dependabot,context,pull_requests,repos";
-        #   };
-        # };
-        # mcp-atlassian = {
-        #   command = "mcp-atlassian-server";
-        #   env = {
-        #     JIRA_URL = "\${input:jira_url}";
-        #     JIRA_PERSONAL_TOKEN = "\${input:jira_token}";
-        #     JIRA_PROJECTS_FILTER = "DEVEX";
-        #     ENABLED_TOOLS = "jira_search,jira_get_issue,jcp_get_worklog,jira_get_board_issues,jira_get_sprint_issues,jira_get_issue_link_types,jira_get_user_profile,jira_create_issue,jira_update_issue,jira_add_comment,jira_transition_issue,jira_create_issue_link,jira_remove_issue_link";
-        #   };
-        # };
         context7 = {
           type = "stdio";
           command = "context7-mcp";
