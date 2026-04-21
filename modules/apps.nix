@@ -61,7 +61,7 @@
       "mcp-publisher"
       "ko"
       "poppler"
-      "gemini-cli"
+      "ansible"
     ];
 
     # `brew install --cask`
