@@ -66,6 +66,8 @@
     AWS_CA_BUNDLE = "/opt/homebrew/etc/ca-certificates/cert.pem";
     JAVA_HOME = "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home";
     NODE_EXTRA_CA_CERTS = "$HOME/.zcli/zscaler_root.pem";
+    SSL_CERT_FILE = "$HOME/.zcli/zscaler_root.pem";
+    REQUESTS_CA_BUNDLE = "$HOME/.zcli/zscaler_root.pem";
   };
 
   home.sessionPath = [
