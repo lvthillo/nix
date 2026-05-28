@@ -42,6 +42,11 @@ in {
     # the Home Manager release notes for a list of state version
     # changes in each release.
     stateVersion = "25.05";
+
+    # home-manager master temporarily lags nixpkgs-unstable after a release
+    # (HM claims 26.05 while nixpkgs-unstable has rolled to 26.11). Suppress
+    # the warning; remove once HM master bumps to 26.11.
+    enableNixpkgsReleaseCheck = false;
   };
 
   # Let Home Manager install and manage itself.
