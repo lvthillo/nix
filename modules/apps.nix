@@ -62,6 +62,7 @@
       "ko"
       "poppler"
       "ansible"
+      "rtk"
     ];
 
     # `brew install --cask`
