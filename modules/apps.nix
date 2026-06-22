@@ -68,7 +68,6 @@
     # `brew install --cask`
     casks = [
       "firefox"
-      "discord"
       "spotify"
       "postgres-app"
       "sublime-text"
