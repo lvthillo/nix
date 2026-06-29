@@ -92,11 +92,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1782710567,
-        "narHash": "sha256-c10gGxCqWZzhLrjqfu6zqIdGofXQc9ZBCSWdVi0KOXE=",
+        "lastModified": 1782721355,
+        "narHash": "sha256-4+hGroGzQrk+nCC3BvAKEbDAbXRD6WbFRBIkUFr2aL4=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "aee5bf81e5322205e4715360bcb4ad464683abde",
+        "rev": "5d6b9ccece10d72728a9a25a4d59784324526ce2",
         "type": "github"
       },
       "original": {
@@ -161,11 +161,12 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1782636521,
-        "narHash": "sha256-Yf2TcFLw0r574fP/5eUN6N8el70HbYNdbDeeHpnK2eQ=",
-        "rev": "e1c1b84752fb0897897380a3cae9dc7fcab91ca3",
+        "lastModified": 1781074563,
+        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "revCount": 1014179,
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1023798.e1c1b84752fb/nixexprs.tar.xz"
+        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/nixpkgs-weekly/0.1.1014179%2Brev-9ae611a455b90cf061d8f332b977e387bda8e1ca/019ef33c-03d6-7c80-8293-acac0bf146bb/source.tar.gz"
       },
       "original": {
         "id": "nixpkgs",
