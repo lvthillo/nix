@@ -78,7 +78,6 @@
       "shottr"
       "docker-desktop"
       "kiro"
-      "kiro-cli"
       "claude-code@latest"
       # Remove below after a while
       # Necessary for testing the license server connection
