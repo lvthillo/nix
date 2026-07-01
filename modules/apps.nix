@@ -26,6 +26,10 @@
       "Slack" = 803453959;
       "The Unarchiver" = 425424353;
       "Boop" = 1518425043;
+      # Stock Apple apps - listed so `cleanup = "zap"` doesn't uninstall them.
+      "iMovie" = 408981434;
+      "Numbers" = 361304891;
+      "Pages" = 361309726;
     };
 
     # `brew install`
@@ -62,7 +66,6 @@
       "ko"
       "poppler"
       "ansible"
-      "rtk"
     ];
 
     # `brew install --cask`
